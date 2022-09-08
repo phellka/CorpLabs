@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32802.440
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorpLabs", "CorpLabs\CorpLabs.csproj", "{54007856-021B-408A-890D-F79C002CBF80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MadyshevVisualComponents", "MadyshevVisualComponents\MadyshevVisualComponents.csproj", "{42B033EB-C9F3-41B9-BCB3-E9AD331A29E1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{54007856-021B-408A-890D-F79C002CBF80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54007856-021B-408A-890D-F79C002CBF80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54007856-021B-408A-890D-F79C002CBF80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54007856-021B-408A-890D-F79C002CBF80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42B033EB-C9F3-41B9-BCB3-E9AD331A29E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42B033EB-C9F3-41B9-BCB3-E9AD331A29E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42B033EB-C9F3-41B9-BCB3-E9AD331A29E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42B033EB-C9F3-41B9-BCB3-E9AD331A29E1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {46569309-78C7-41E4-B249-8B1322604F09}
+	EndGlobalSection
+EndGlobal
