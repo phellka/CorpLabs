@@ -13,7 +13,7 @@ namespace MadyshevVisualComponents
 {
     public partial class MadyshevListBox : UserControl
     {
-        public event EventHandler SelectedIndexChanged;
+        private event EventHandler selectedIndexChanged;
         public string ListBoxValue
         {
             set
@@ -32,6 +32,7 @@ namespace MadyshevVisualComponents
         {
             InitializeComponent();
             listBox.SelectedIndexChanged += new System.EventHandler(this.SelectIndexChanged);
+            listBox.SelectedIndexChanged += (sender, e) => selectedIndexChanged?.Invoke(sender, e);
         }
         public void AddItem(string item)
         {
@@ -46,7 +47,11 @@ namespace MadyshevVisualComponents
         {
             Refresh();
             base.OnSizeChanged(e);
-            SelectedIndexChanged?.Invoke(sender, e);
+        }
+        public event EventHandler SelectedIndexChanged
+        {
+            add { selectedIndexChanged += value;  }
+            remove { selectedIndexChanged -= value;  }
         }
     }
 }

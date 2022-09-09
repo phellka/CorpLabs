@@ -13,7 +13,7 @@ namespace MadyshevVisualComponents
 {
     public partial class MadyshevTextBox : UserControl
     {
-        public event EventHandler CheckedChanged;
+        private event EventHandler checkedChanged;
         public double? TextBoxValue
         {
             get
@@ -26,11 +26,15 @@ namespace MadyshevVisualComponents
                 {
                     throw new Exception("value not entered");
                 }
-                if (!Regex.IsMatch(textBox.Text, @"((\d+)(\,+)(\d+))$"))
+                Double res = 0;
+                if (Double.TryParse(textBox.Text, out res))
+                {
+                    return res;
+                }
+                else
                 {
                     throw new Exception("invalid format");
                 }
-                return Convert.ToDouble(textBox.Text);
             }
             set
             {
@@ -43,11 +47,16 @@ namespace MadyshevVisualComponents
         public MadyshevTextBox()
         {
             InitializeComponent();
+            checkBox.CheckedChanged += (sender, e) => checkedChanged?.Invoke(sender, e);
         }
         private void checkBox_CheckedChanged(object sender, EventArgs e)
         {
             textBox.Enabled = !checkBox.Checked;
-            CheckedChanged?.Invoke(sender, e);
+        }
+        public event EventHandler CheckedChanged
+        {
+            add { checkedChanged += value; }
+            remove { checkedChanged -= value; }
         }
     }
 }
